@@ -7,8 +7,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
-#echo "$(which vcprompt)"
-
 export GREP_OPTIONS='--color=auto'
 
 #export PS1="\u@\h:\w \$(vcprompt)\$ "
