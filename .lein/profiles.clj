@@ -1,11 +1,9 @@
-{:user {:plugins [[lein-kibit "0.0.8"]
-                  [jonase/eastwood "0.0.2"]]
-        :repl-options {:init (do
-                               (require '[clojure.pprint :refer :all]
-                                        '[clojure.reflect :refer :all])
-                               ; http://clojuredocs.org/clojure_core/clojure.pprint/print-table
-                               ; example: (inspect clojure.lang.BigInt)
-                               (defn inspect [o]
-                                 (let [r (:members (reflect o))] ;
-                                   (print-table [:name :type :flags]
-                                                (sort-by :name r)))))}}}
+{:user {:plugins
+        [[cider/cider-nrepl "0.8.1"]
+         [lein-kibit "0.0.8"]
+         [lein-cloverage "1.0.2"]
+         ;;[lein-clique "0.1.1"]
+         ;;[jonase/eastwood "0.0.2"]
+         [unleash/unleash "0.1.1"]]
+        :repositories {"releases" {:url "https://nexus.office.sf.local/nexus/content/repositories/releases"
+                                   :snapshots false}}}}
